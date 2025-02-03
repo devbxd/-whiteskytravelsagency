@@ -3,59 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Sky Travel Agency - Coming Soon</title>
+    <title>WHITE SKY - Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #C9B037;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #000000, #000000);
+            color: #d4af37;
+            text-align: center;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
-            text-align: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .navbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-        .content {
-            max-width: 600px;
+        .container {
+            max-width: 800px;
             padding: 20px;
         }
-        .logo {
-            font-size: 50px;
-            font-weight: bold;
-        }
-        .subtext {
-            font-size: 20px;
-            font-weight: lighter;
-        }
         h1 {
-            font-size: 50px;
-            margin: 0;
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
-        p {
-            font-size: 20px;
-            margin-top: 10px;
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: 2px solid #d4af37;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .subscribe-input {
+            padding: 10px;
+            width: 60%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #d4af37;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .subscribe-btn:hover {
+            background-color: #b38e2d;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">WHITE SKY<br><span class="subtext">Travel Agency</span></div>
-    <div class="content">
-        <h1>COMING SOON</h1>
-        <p>Get ready to experience the best flight booking agency.</p>
+    <div class="container">
+        <div class="logo">WHITE SKY</div>
+        <h2>Travel Agency</h2>
+        <h1>Coming Soon</h1>
+        <p>We are preparing something amazing for you! Stay tuned.</p>
+        <input type="email" class="subscribe-input" placeholder="Enter your email" />
+        <button class="subscribe-btn">Notify Me</button>
     </div>
 </body>
 </html>
