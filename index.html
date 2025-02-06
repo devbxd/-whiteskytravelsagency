@@ -3,67 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Sky Travel Agency - Coming Soon</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>M&S Travel Agency</title>
     <style>
+        /* General Styles */
         body {
-            background: linear-gradient(135deg, #000000, #000000);
-            color: #ffffff;
-            text-align: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1 {
+            margin-left: 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* Image Slider (Défilement horizontal continu) */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 50vh; /* Hauteur modifiée */
+            overflow: hidden;
+        }
+
+        .slider .images {
+            display: flex;
+            animation: scrollImages 20s linear infinite; /* Animation continue */
+        }
+
+        .slider .image {
+            margin-right: 20px; /* Espace entre les images */
+            flex-shrink: 0; /* Empêche les images de se rétrécir */
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* Permet de couvrir toute la hauteur sans déformation */
+        }
+
+        /* Animation pour faire défiler les images */
+        @keyframes scrollImages {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%); /* Faire défiler de 100% vers la gauche */
+            }
+        }
+
+        form {
+            display: flex;
             flex-direction: column;
-            font-family: 'Arial', sans-serif;
+            gap: 15px;
+            width: 300px;
+            margin: auto;
         }
-        .logo {
-            max-width: 200px;
-            margin-bottom: 20px;
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        .coming-soon {
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            letter-spacing: 3px;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-            animation: glow 1.5s infinite alternate;
+
+        input:focus, textarea:focus {
+            border: 1px solid #DAA520;
         }
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            }
-            to {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            }
-        }
-        .email-input {
-            max-width: 400px;
-            margin-bottom: 20px;
-        }
-        .contact {
-            margin-top: 30px;
-            font-size: 1.2rem;
-        }
-        .btn-custom {
-            background-color: #ffcc00;
+
+        button {
+            padding: 10px;
+            background-color: #DAA520;
+            color: #fff;
             border: none;
-            color: #1e3c72;
-            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .btn-custom:hover {
-            background-color: #e6b800;
+
+        button:hover {
+            background-color: #C49B00;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="White Sky Travel Agency Logo" class="logo">
-    <div class="coming-soon">COMING SOON</div>
-    <form action="https://formspree.io/f/xbldyear" method="POST" class="email-input">
-        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
-        <button type="submit" class="btn btn-custom mt-2">Notify Me</button>
-    </form>
-    <div class="contact">Contact us: +965 988 186 99 </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>M&S</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Image Slider -->
+    <section id="home" class="section">
+        <div class="slider">
+            <div class="images">
+                <div class="image">
+                    <img src="image1.jpg" alt="Flight Image 1">
+                </div>
+                <div class="image">
+                    <img src="image2.jpg" alt="Flight Image 2">
+                </div>
+                <div class="image">
+                    <img src="image3.jpg" alt="Flight Image 3">
+                </div>
+                <!-- Duplicating images for seamless scrolling effect -->
+                <div class="image">
+                    <img src="image1.jpg" alt="Flight Image 1">
+                </div>
+                <div class="image">
+                    <img src="image2.jpg" alt="Flight Image 2">
+                </div>
+                <div class="image">
+                    <img src="image3.jpg" alt="Flight Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flights Section -->
+    <section id="flights" class="section">
+        <h2>Book Your Flight</h2>
+        <form action="https://formspree.io/f/xbldyear" method="POST">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Enter departure location" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Enter destination location" required>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Search Flights</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 M&S Travel Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
